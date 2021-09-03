@@ -42,6 +42,17 @@ public class LinkedList<K>{
 		return tempNode;
 	}
 	
+	public INode<K> poplast(){
+		INode<K> tempNode = this.head;
+		while(tempNode.getNext()!= this.tail) {
+			tempNode=tempNode.getNext();
+		}
+		this.tail = tempNode;
+		INode<K> tempNode2;
+		tempNode2=tempNode.getNext();
+		tempNode.setNext(null);
+		return tempNode2;
+	}
 	public void printNodes() {
 		System.out.println("My Nodes: "+head);
 	}
