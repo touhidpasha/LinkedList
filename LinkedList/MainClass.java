@@ -1,7 +1,6 @@
 package LinkedList;
 
 
-
 public class MainClass {
 	
 	
