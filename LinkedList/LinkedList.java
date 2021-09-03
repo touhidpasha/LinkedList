@@ -36,6 +36,12 @@ public class LinkedList<K>{
 
 		}
 	}
+	public INode<K> pop(){
+		INode<K> tempNode = this.head;
+		this.head = head.getNext();
+		return tempNode;
+	}
+	
 	public void printNodes() {
 		System.out.println("My Nodes: "+head);
 	}

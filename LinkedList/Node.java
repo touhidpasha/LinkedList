@@ -3,7 +3,6 @@ package LinkedList;
 /*
  * @node class contains the data and node pointing to the next node
  * @param getkey 
- * @param 
  */
 public class Node<K> implements INode<K> {//this Node class contains linkedlist data and next node
 	private K key;
