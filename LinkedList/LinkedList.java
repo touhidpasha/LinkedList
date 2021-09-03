@@ -53,6 +53,18 @@ public class LinkedList<K>{
 		tempNode.setNext(null);
 		return tempNode2;
 	}
+	
+	public INode<K> searchNode(K Key) {//search method to find element if it prestn
+		INode<K> tempNode = head;
+		while(tempNode != null && tempNode.getNext() != null) {
+			if (tempNode.getKey().equals(Key)){
+				return tempNode;
+			}
+			tempNode = tempNode.getNext();
+		}
+		return null;
+	}
+	
 	public void printNodes() {
 		System.out.println("My Nodes: "+head);
 	}

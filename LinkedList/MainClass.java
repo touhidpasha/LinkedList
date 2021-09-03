@@ -53,12 +53,29 @@ public class MainClass {
 		System.out.println(temp.getKey()+" has been deleted");
 		myLinkedList.printNodes();
 	}
+	public static void searchNodeMethod() {
+		Node<Integer> myFirstNode = new Node<>(70);
+		Node<Integer> mySecondNode = new Node<>(30);
+		Node<Integer> myThirdNode = new Node<>(56);
+	
+		LinkedList<Integer> myLinkedList = new LinkedList<Integer>();
+		myLinkedList.add(myFirstNode);
+		myLinkedList.add(mySecondNode);
+		myLinkedList.add(myThirdNode);
+		INode<Integer> result = myLinkedList.searchNode(30);//passing 30 as argument to search
+		if(result == null)
+			System.out.println("Element not present");
+		else
+			System.out.println(result.getKey()+" is present");
+		myLinkedList.printNodes();
+	}
 	
 	public static void main(String [] args) {
 		Create();//Create() method to create a linked list 
 		link();//this function will link 56->30->70
 		//deleteTopNode();
-		deleteLastNode();
+		//deleteLastNode();
+		searchNodeMethod();//calling method to search a element
 	}
 	
 }
